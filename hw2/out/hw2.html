@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.0.0-rc5" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote { 
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013"; 
+      position: absolute;
+      margin-left: -1em; 
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {  
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;  
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 { 
+    margin-top: 1.22em; 
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  { 
+    margin-top: 1ex;    
+  }
+  .madoko h5, .madoko h6 { 
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 { 
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 { 
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt, 
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;    
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0">
+<div class="mathdefs input-mathdefs"></div>
+<p class="p noindent"><em class="em-low1">CS 127: Cryptography / Boaz Barak</em>
+</p><h2 id="sec-homework-2" class="h1" data-heading-depth="1" style="display:block"><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span>Homework 2</h2>
+<p class="p noindent">Total of 128 points.
+</p><h3 id="sec-exercises-from-lecture-3" class="h2" data-heading-depth="2" style="display:block"><span class="heading-before"><span class="heading-label">1.1</span>.&#8194;</span>Exercises from Lecture 3</h3>
+<ol class="ol compact">
+<li class="li ol-li compact-li">(impossibility of statistically testing randomness, 15 points) Let <span class="math-rendering" title="Rendering math..."><span class="math-inline">$T_1,\ldots,T_M:\zo^n\rightarrow\zo$</span></span> be a collection of function that are supposed to be statistical tests for randomness. Prove that if <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span> is large enough and  <span class="math-rendering" title="Rendering math..."><span class="math-inline">$M&lt;2^{100n}$</span></span> there exists a distribution <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> that passes all these tests but is very far from the uniform distribution. Concretely, show that
+there exists a random variable <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> over <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^n$</span></span> such that:
+
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">For every <span class="math-rendering" title="Rendering math..."><span class="math-inline">$i\in [M]$</span></span>, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$| \E[ T_i(X)]-\E[T_i(U_n)]|&lt;0.001$</span></span> where <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span> is the uniform distribution over <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span> bits.
+</li>
+<li class="li ul-li list-star-li compact-li">But, there exists some <span class="math-rendering" title="Rendering math..."><span class="math-inline">$T^*:\zo^n\rightarrow\zo$</span></span> such that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$| \E[ T^*(X)] - \E[T^*(U_n)] |&gt;0.999$</span></span>.
+
+<div class="proof" style="theorem-caption-end: ;display:block;margin:1ex 0pt">
+<p class="p noindent"><span class="proof-before"><strong class="strong-star2">Proof</strong>. <span class="theorem-caption"></span> </span>Take <span class="math-rendering" title="Rendering math..."><span class="math-inline">$S \subset \zo^n$</span></span> such that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$|S| &lt; 2^{n + \log \epsilon}$</span></span>
+for some small <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\epsilon \in (0,1]$</span></span>. Let <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> be any distribution with support <span class="math-rendering" title="Rendering math..."><span class="math-inline">$S$</span></span> (ie, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$P[X = x] &gt; 0$</span></span> for <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in S$</span></span>
+and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\Pr[X = x] = 0$</span></span> for <span class="math-rendering" title="Rendering math..."><span class="math-inline">$x \notin S$</span></span>). Then consider the test <span class="math-rendering" title="Rendering math..."><span class="math-inline">$T^*: \zo^n \to \zo$</span></span> defined as the characteristic
+or indicator function of the set <span class="math-rendering" title="Rendering math..."><span class="math-inline">$S$</span></span>:</p></div>
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><span class="math-rendering" title="Rendering math..."><span class="mathdisplay math-display" data-math-full="">\[T^*(x) = \begin{cases} 
+ 1 &amp; x \in S \\
+ 0 &amp; x \notin S 
+\end{cases}
+\]</span></span></div></div>Then note that this test distinguishes between <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span> and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span>. 
+
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><span class="math-rendering" title="Rendering math..."><span class="mathdisplay math-display" data-math-full="">\[\begin{aligned}
+|\E[ T^*(X)] - \E[T^*(U_n)| &amp;= \left|\sum_{x \in S} T^*(x) - \frac{1}{2^n} \sum_{x\in \zo^n} T^*(x) \right| \\
+&amp;= |1 - \frac{|S|}{2^n}| \\
+&amp;= 1 - \frac{|S|}{2^n} \\
+&amp;&gt; 1 - 2^{\log \epsilon} \\
+&amp;= 1 - \epsilon
+\end{aligned}
+\]</span></span></div></div>The first expectation is simplified because it&#39;s simply the sum of the probabilities of the distribution
+<span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> over it&#39;s support (which is <span class="math-rendering" title="Rendering math..."><span class="math-inline">$1$</span></span>) and the second expectation is simply the proportion of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$|S|$</span></span> to <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^n$</span></span>.
+Note that we can make epsilon arbitrarily small, and in particular, we can take <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\epsilon = 0.001$</span></span>. Now
+let <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> be the uniform distribution over <span class="math-rendering" title="Rendering math..."><span class="math-inline">$S$</span></span>, the restricted sample space. Then consider, for fixed <span class="math-rendering" title="Rendering math..."><span class="math-inline">$i$</span></span>, 
+the probability of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\E[T_i(X)]$</span></span> deviating from the <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\mu = \E[T_i(U_n)]$</span></span> by more than <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\epsilon$</span></span>. 
+
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><span class="math-rendering" title="Rendering math..."><span class="mathdisplay math-display" data-math-full="">\[\begin{aligned}
+\Pr[|\E[T_i(X)] - \E[T_i(U_n)]|  &gt; \epsilon ] &amp;= \Pr \left[ |\sum_{x \in S} \frac{T_i(x)}{|S|}  - \mu | &gt; \epsilon \right]  \\
+&amp;&lt; 2^{\frac{-\epsilon^2 n}{4}}
+\end{aligned}
+\]</span></span></div></div>The above inequality follows immediately from the Chernoff bound. Note that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\E[T_i(X)]$</span></span> is essentially
+a sample mean of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$T_i(U_n)$</span></span> (we&#39;re restricted <span class="math-rendering" title="Rendering math..."><span class="math-inline">$S \subset \zo^n$</span></span>). With the above, we now have a tight
+upper bound on the probability that the test <em class="em-low1">does</em> distinguish between <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span>. Then simply note
+that the probability that none of the tests distinguish is the complement of at least one of the tests
+distingushing. Letting <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D_i$</span></span> be the event where <span class="math-rendering" title="Rendering math..."><span class="math-inline">$T_i$</span></span> successfully distinguishes between <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span>
+by some <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\epsilon$</span></span>, the probability of successfully distinguishing, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D$</span></span> is given by:
+
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><span class="math-rendering" title="Rendering math..."><span class="mathdisplay math-display" data-math-full="">\[\begin{aligned}
+\Pr[D] &amp;= \Pr[ \bigcup_i D_i ] \\
+&amp;\leq \sum_{i} \Pr[D_i] \\
+&amp;&lt; \sum_{i} 2^{\frac{-\epsilon^2 n}{4}} \\
+&amp;= \frac{M}{2^{\frac{\epsilon^2 n}{4}}} 
+\end{aligned}
+\]</span></span></div></div>The first inequality is simply using the union-bound, and the second uses the Chernoff bound shown
+previously. From the above we can immediately see that for any given <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\epsilon &gt; 0$</span></span>, we can find
+a large enough <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span> so that the probability of any of the tests <span class="math-rendering" title="Rendering math..."><span class="math-inline">$T_i$</span></span> successfully distinguishing 
+the two distributions <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$S$</span></span> can be made arbitrarily small. This shows that for large enough <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span>
+and for fixed <span class="math-rendering" title="Rendering math..."><span class="math-inline">$M$</span></span>, then no test will successfully distinguish between <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span>. However, we showed
+before that the indicator test <span class="math-rendering" title="Rendering math..."><span class="math-inline">$T^*$</span></span> will always successfully distinguish between <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span> and any distribution
+<span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> with support <span class="math-rendering" title="Rendering math..."><span class="math-inline">$S \subset \zo ^n$</span></span>. 
+<span style="float:right">&#9633;</span>
+</li></ul></li></ol>
+
+<p class="p noindent">(No points, just food for thought.) Based on this exercise, what do you believe can we say about a distribution <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X$</span></span> if it passes the FIPS 140-2 testing suite for randomness?
+Based on the above, we can&#39;t say much. Testing for randomness appears to be impossible.
+</p>
+<ol class="ol loose" start="2">
+<li class="li ol-li loose-li">
+<p>(20 points) We call a sequence <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ X_n \}_{n\in\N}$</span></span> where <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X_n$</span></span> is a distribution over <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^n$</span></span>  \emph{pseudorandom} if it&#39;s computationally indistinguishable from the sequence <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ U_n \}$</span></span> where <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span> is the uniform distribution over <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^n$</span></span>. Are the following sequences pseudorandom? prove or refute.
+</p>
+<ol class="ol compact" style="list-style-type:lower-alpha">
+<li class="li ol-li compact-li">(10 points) <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ X_n \}$</span></span> where  <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X_n$</span></span> be the following distribution: we pick <span class="math-rendering" title="Rendering math..."><span class="math-inline">$x_1,\ldots,x_{n-1}$</span></span>
+uniformly at random in <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^{n-1}$</span></span>, and let <span class="math-rendering" title="Rendering math..."><span class="math-inline">$x_n$</span></span> be the parity (i.e. XOR) of
+<span class="math-rendering" title="Rendering math..."><span class="math-inline">$x_1,\ldots,x_{n-1}$</span></span>, we output <span class="math-rendering" title="Rendering math..."><span class="math-inline">$x_1,\ldots, x_n$</span></span>.
+
+<div class="proof" style="theorem-caption-end: ;display:block;margin:1ex 0pt">
+<p class="p noindent"><span class="proof-before"><strong class="strong-star2">Proof</strong>. <span class="theorem-caption"></span> </span>The sequence <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{X_n\}$</span></span> is computationally distinguishable from <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{U_n\}$</span></span>. Note that this follows from 
+the fact that for any well-defined <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span>, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X_n$</span></span> is computationally distinguishable from <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span>. A successful distinguisher
+can be defined as <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D$</span></span>, where on input <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in \zo^n$</span></span>, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D$</span></span> will take the parity of the first <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n-1$</span></span> bits
+and output <span class="math-rendering" title="Rendering math..."><span class="math-inline">$1$</span></span> if <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s_n = \oplus_{i=1}^{n-1}x_i$</span></span> and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$0$</span></span> otherwise. Then note:</p></div>
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><span class="math-rendering" title="Rendering math..."><span class="mathdisplay math-display" data-math-full="">\[|\E[D(X_n)] - \E[D(U_n]| = |1 - \frac{1}{2}| = \frac{1}{2}
+\]</span></span></div></div>Note that the first expectation is <span class="math-rendering" title="Rendering math..."><span class="math-inline">$1$</span></span> because it holds for all strings drawn from <span class="math-rendering" title="Rendering math..."><span class="math-inline">$X_n$</span></span> while the
+second expected value only holds half of the time for strings drawn from <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_n$</span></span>. Furthermore, note that
+<span class="math-rendering" title="Rendering math..."><span class="math-inline">$D$</span></span> is linear in the input, and therefore is computationally efficient. 
+<span style="float:right">&#9633;</span>
+</li>
+<li class="li ol-li compact-li">(10 points) <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{Z_n \}$</span></span> where for <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span> large enough, with probability <span class="math-rendering" title="Rendering math..."><span class="math-inline">$2^{-n/10}$</span></span> we output an <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span> bit  string encoding the text \texttt{&#8216;&#39;This is not a pseudorandom distribution&#8217;&#39;} (say encode
+in ASCII and pad with zeros), and with probability <span class="math-rendering" title="Rendering math..."><span class="math-inline">$1-2^{-n/10}$</span></span> pick a random string. For
+<span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span> that is not large enough to encode the text, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$Z_n$</span></span> always outputs the all zeroes
+string.
+
+<div class="proof" style="theorem-caption-end: ;display:block;margin:1ex 0pt">
+<p class="p noindent"><span class="proof-before"><strong class="strong-star2">Proof</strong>. <span class="theorem-caption"></span> </span>We proof that the sequence <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{Z_n\}$</span></span> is computationally distinguishable from <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{U_n\}$</span></span>. We do this by
+showing that for large enough <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span> and a computationally efficient distinguisher <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D$</span></span>, 
+<span class="math-rendering" title="Rendering math..."><span class="math-inline">$|\E[D(Z_n)] - \E[D(Z_n)]|$</span></span> is non-negligible. The construction of this distinguisher is very 
+straight forward. Let <span class="math-rendering" title="Rendering math..."><span class="math-inline">$t$</span></span> be the number of bits required to encode the given phrase in 
+ASCII (note that this is fixed). On input <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in \zo^n$</span></span> for <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n \geq t$</span></span>, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D$</span></span> looks at the first <span class="math-rendering" title="Rendering math..."><span class="math-inline">$t$</span></span> bits of the input
+string <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s$</span></span>. If the first <span class="math-rendering" title="Rendering math..."><span class="math-inline">$t$</span></span> bits are equal to the phrase, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D(s) = 1$</span></span>, otherwise <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D(s) = 0$</span></span>. 
+Then note the following for <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n \geq t$</span></span>:</p></div>
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><span class="math-rendering" title="Rendering math..."><span class="mathdisplay math-display" data-math-full="">\[\begin{aligned}
+| \E[D(Z_n)] - \E[D(U_n)] | &amp;= | 1 - \frac{2^{n-t}{2^n} | \\
+&amp;= \frac{1}{2^t}
+\end{aligned}
+\]</span></span></div></div>The first expectation is simplified because the property holds for all <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in_R Z_n$</span></span>, 
+and the second expectation is just using the naive definition of probability to count 
+the number of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in_R U_n$</span></span> such that the first <span class="math-rendering" title="Rendering math..."><span class="math-inline">$t$</span></span> bits are fixed to the given ASCII encoding.
+Then note that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$2^{-t}$</span></span> is fixed and non-negligible, therefore the two distributions are
+distinguishable. Furthermore, note that the running time of the algorithm is actually constant,
+depending only on <span class="math-rendering" title="Rendering math..."><span class="math-inline">$t$</span></span>, and is therefore computationally efficient. 
+</li></ol>
+</li>
+<li class="li ol-li loose-li">
+<p>(24 points) Suppose that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G:\zo^n\rightarrow\zo^{3n}$</span></span> is a secure pseudorandom generator. For each one of the constructions <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G^1,G^2,G^3$</span></span> below either prove that they are necessarily a secure pseudorandom generator or give a counterexample (which is a construction, based on the Cipher, PRG or PRG conjectures, of a generator <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G$</span></span> such that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G_i$</span></span> would not be secure.)
+</p>
+<ol class="ol compact" style="list-style-type:lower-alpha">
+<li class="li ol-li compact-li">(8 points) <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G^1(s)=G(s)_{1,\ldots,2n}$</span></span> (i.e., the first <span class="math-rendering" title="Rendering math..."><span class="math-inline">$2n$</span></span> bits of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G(s)$</span></span>).
+
+<div class="proof" style="theorem-caption-end: ;display:block;margin:1ex 0pt">
+<p class="p noindent"><span class="proof-before"><strong class="strong-star2">Proof</strong>. <span class="theorem-caption"></span> </span><span class="math-rendering" title="Rendering math..."><span class="math-inline">$G^1$</span></span> is secure. Suppose not. Then there exists a distinguisher <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D: \zo^{2n} \to \zo$</span></span> which can distinguish
+between <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G^1(U_n)$</span></span> and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_{2n}$</span></span>. Then note that we can construct a distinguisher <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D&#39;: \zo^{3n} \to \zo$</span></span>
+that can distinguish between <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G(U_n)$</span></span> and <span class="math-rendering" title="Rendering math..."><span class="math-inline">$U_{3n}$</span></span>, contradicting our assumption that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G$</span></span> is secure.
+Let <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D&#39;$</span></span> be the function which on input  </p></div></li>
+<li class="li ol-li compact-li">(8 points) <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G^2(s)=G(0,s_2,\ldots,s_n)$</span></span> (i.e., the output of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G(s)$</span></span> but setting the first seed bit to zero)
+
+<div class="proof" style="theorem-caption-end: ;display:block;margin:1ex 0pt">
+<p class="p noindent"><span class="proof-before"><strong class="strong-star2">Proof</strong>. <span class="theorem-caption"></span> </span><span class="math-rendering" title="Rendering math..."><span class="math-inline">$G^2$</span></span> is not secure. It is immediately clear that we can construct a distinguisher <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D: \zo^n \to \zo$</span></span> which 
+does the following: on input <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in \zo^n$</span></span>, if <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s_0 = 0$</span></span>, output <span class="math-rendering" title="Rendering math..."><span class="math-inline">$1$</span></span>, otherwise <span class="math-rendering" title="Rendering math..."><span class="math-inline">$0$</span></span>. Then:</p></div>
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><span class="math-rendering" title="Rendering math..."><span class="mathdisplay math-display" data-math-full="">\[| \E[D(G^2(U_n))] - \E[D(U_n)] | = |1 - \frac{1}{2}| = \frac{1}{2} 
+\]</span></span></div></div>The first expectation is <span class="math-rendering" title="Rendering math..."><span class="math-inline">$1$</span></span> since by construction <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D$</span></span> always outputs <span class="math-rendering" title="Rendering math..."><span class="math-inline">$1$</span></span> for <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in_R G^2(U_n)$</span></span> and
+the second expectation is <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\frac{1}{2}$</span></span> since half of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in_R U_n$</span></span> begin with <span class="math-rendering" title="Rendering math..."><span class="math-inline">$0$</span></span> and half don&#39;t. Note
+that the above distinguisher is computationally efficient since it only needs to check the first bit
+of the input.
+</li></ol>
+
+<p>c. (8 points) <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G^3(s_1,\ldots,s_n)=G(s_n,\ldots,s_1)$</span></span> (i.e., the output of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G(s&#39;)$</span></span> where <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s&#39;$</span></span> is obtained by reversing <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s$</span></span>).
+</p>
+<div class="proof" style="theorem-caption-end: ;display:block;margin:1ex 0pt">
+<p class="p noindent"><span class="proof-before"><strong class="strong-star2">Proof</strong>. <span class="theorem-caption"></span> </span>  <span class="math-rendering" title="Rendering math..."><span class="math-inline">$G^3$</span></span> is secure. Suppose not. Then there exists a computationally efficient distinguisher <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D: \zo^n \to \zo$</span></span>.
+  Note that we can construct an efficient distingusher <span class="math-rendering" title="Rendering math..."><span class="math-inline">$D&#39;: \zo^n \to \zo$</span></span> which on input $s \in_R $.</p></div></li></ol>
+<h3 id="sec-exercises-from-lecture-4" class="h2" data-heading-depth="2" style="display:block"><span class="heading-before"><span class="heading-label">1.2</span>.&#8194;</span>Exercises from Lecture 4</h3>
+<ol class="ol loose" start="4">
+<li class="li ol-li loose-li">
+<p>(24 points) In these three questions you&#39;ll show that if we have
+a pseudorandom function family with particular input and output sizes, we can easily obtain a
+family that handles different inputs and outputs. 
+</p>
+<ol class="ol compact" style="list-style-type:lower-alpha">
+<li class="li ol-li compact-li">(Padding inputs and outputs, 8 points) Suppose that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f_s \}$</span></span> is a pseudorandom function collection where for every <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s\in\zo^n$</span></span>, <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f_s$</span></span> maps   <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^n$</span></span> to <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^n$</span></span>. Prove that if we define <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f&#39;_s$</span></span> to be function that on input <span class="math-rendering" title="Rendering math..."><span class="math-inline">$i\in [2^{n/2}]$</span></span> outputs the first bit of <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f_s(2^{n/2}+i)$</span></span> then <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f&#39;_s \}$</span></span> is a pseudorandom function collection (with one bit output).
+</li></ol>
+
+<p>b. (Increasing output size, 8 points) Prove that if there exists a collection <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f_s \}$</span></span> where <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f_s:\zo^{|s|}\rightarrow \zo$</span></span> (i.e., one bit output), then then there exists a collection <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f&#39;_s \}$</span></span> with  <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f&#39;_s:\zo^{|s|}\rightarrow\zo^{|s|}$</span></span>. See footnote for hint.<sup id="back-fn-hint-prf-expand" ><a href="#fn-hint-prf-expand" title="1.First come up with a pseudorandom family with output longer than $1$ but shorter than $|s|$. For example, if $s \in \zo^{n^2}$ then the output can be $n$. Then show that existence of PRF implies existence of pseudorandom generators and use that to expand your output.
+&#8617;" class="footnote-ref localref" ><span class="footnote-label">1</span></a></sup>
+ 
+c. (Changing PRFs input size, 8 points) Prove that if there exists a collection <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f_s \}$</span></span> of pseudorandom functions with <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f_s:\zo^{|s|}\rightarrow\zo^{|s|}$</span></span> then there exists a collection <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f&#39;_s \}$</span></span> with <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f&#39;_s:\zo^{*}\rightarrow\zo^{|s|}$</span></span> (i.e., <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f&#39;_s$</span></span> for a random <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s\in\zo^n$</span></span> is indistinguishable from a random function from <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^*$</span></span> to <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^n$</span></span>. (If it makes your life easier, it&#39;s fine to construct a collection <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f&#39;_s \}$</span></span> with a single output bit.)
+ 
+</p></li>
+<li class="li ol-li loose-li">
+<p>(20 points) Suppose that <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f_s \}$</span></span> is a collection of secure pseudorandom functions where <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f_s$</span></span> maps <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^{|s|+1}$</span></span> to <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo$</span></span>. For each of the following constructions <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f^1$</span></span>,<span class="math-rendering" title="Rendering math..."><span class="math-inline">$f^2$</span></span> below of function collections mapping <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^{|s|}$</span></span> to <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\zo^2$</span></span>, either prove that they are necessarily secure or show a counterexample (i.e., a construction of PRF&#39;s <span class="math-rendering" title="Rendering math..."><span class="math-inline">$\{ f_s \}$</span></span> based on the PRF conjecture such that the corresponding construction  )
+</p>
+<ol class="ol compact" style="list-style-type:lower-alpha">
+<li class="li ol-li compact-li">(10 points) <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f^1_s(x)=f_s(0\circ x) \circ f_s(1\circ x)$</span></span> 
+</li>
+<li class="li ol-li compact-li">(10 points) <span class="math-rendering" title="Rendering math..."><span class="math-inline">$f^2_s(x)=f_s(0\circ x) \circ f_s(x\circ 1)$</span></span>
+</li></ol>
+</li>
+<li class="li ol-li loose-li">
+<p>(25 points) For the sake of this question, let&#39;s say that a pair of algorithms <span class="math-rendering" title="Rendering math..."><span class="math-inline">$(S,V)$</span></span> is an <em class="em-low1">enhanced message authentication code</em> if it is a secure message authentication code (as per the definition given in the lecture notes) with the following addition&#8212; in the attack game Mallory is given not just oracle (i.e., black box) access to the signing oracle <span class="math-rendering" title="Rendering math..."><span class="math-inline">$S$</span></span> but also to the verification oracle <span class="math-rendering" title="Rendering math..."><span class="math-inline">$V$</span></span>. That is, Mallory can put forward a pair <span class="math-rendering" title="Rendering math..."><span class="math-inline">$(m,\sigma)$</span></span> to the oracle and find out whether or not the pair passes verification. Prove that every <span class="math-rendering" title="Rendering math..."><span class="math-inline">$(S,V)$</span></span> that is a secure message authentication code is also an enhance message authentication code.
+</p></li></ol>
+<span data-line=""></span>
+<div class="footnotes madoko">
+<hr >
+
+<div id="fn-hint-prf-expand" class="footnote" style="line-adjust:0">
+<p class="p noindent"><span class="footnote-before"><sup><span class="footnote-label">1</span>.</sup></span>First come up with a pseudorandom family with output longer than <span class="math-rendering" title="Rendering math..."><span class="math-inline">$1$</span></span> but shorter than <span class="math-rendering" title="Rendering math..."><span class="math-inline">$|s|$</span></span>. For example, if <span class="math-rendering" title="Rendering math..."><span class="math-inline">$s \in \zo^{n^2}$</span></span> then the output can be <span class="math-rendering" title="Rendering math..."><span class="math-inline">$n$</span></span>. Then show that existence of PRF implies existence of pseudorandom generators and use that to expand your output.
+<a href="#back-fn-hint-prf-expand" class="footnote-backref localref">&#8617;</a></p></div></div></div>
+</body>
+
+</html>

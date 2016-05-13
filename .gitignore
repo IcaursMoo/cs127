@@ -1,0 +1,40 @@
+### IGNORE .pdf
+*.pdf
+
+### IGNORE LaTeX related files
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.out
+
+### IGNORE additional LaTeX files
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+### IGNORE deb package files
+*.deb
+
+### IGNORE Mathematica files
+*.cdf
+
+### IGNORE markdown files
+*.dim
